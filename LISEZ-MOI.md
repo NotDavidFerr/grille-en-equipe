@@ -90,6 +90,11 @@ Render et Railway redéploient automatiquement à chaque envoi.
   jeu entre amis, ce n'est pas gênant — il suffit de recréer une salle.
 - 5 grilles sont incluses (Généraliste, Cuisine, Voyage, Cinéma, Sport). Une
   grille est tirée au hasard à chaque création de salle, et une nouvelle est
-  retirée à chaque fois qu'on clique sur « Rejouer dans cette salle ». Elles
-  se trouvent dans le tableau `PUZZLES`, identique dans `server.js` et
-  `public/index.html` — dis-moi si tu veux que j'en ajoute d'autres.
+  retirée à chaque fois qu'on clique sur « Rejouer dans cette salle ».
+  Elles vivent toutes dans **`data/puzzles.json`**, un fichier à part —
+  ni `server.js` ni `public/index.html` n'ont besoin d'être modifiés pour en
+  ajouter. Une grille mal formée dans ce fichier est simplement ignorée (avec
+  un message dans les logs du serveur), sans empêcher le jeu de démarrer.
+  Dis-moi si tu veux que j'en ajoute d'autres — après un ajout, un simple
+  `git push` suffit pour les mettre en ligne (pas besoin de reconstruire quoi
+  que ce soit).
