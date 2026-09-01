@@ -88,6 +88,8 @@ Render et Railway redéploient automatiquement à chaque envoi.
 - Les salles de jeu vivent en mémoire sur le serveur : si celui-ci redémarre
   (mise en veille, redéploiement), les parties en cours sont perdues. Pour un
   jeu entre amis, ce n'est pas gênant — il suffit de recréer une salle.
-- Une seule grille est incluse pour l'instant (5 mots, thème généraliste).
-  Elle se trouve dans le tableau `PUZZLES`, identique dans `server.js` et
+- 5 grilles sont incluses (Généraliste, Cuisine, Voyage, Cinéma, Sport). Une
+  grille est tirée au hasard à chaque création de salle, et une nouvelle est
+  retirée à chaque fois qu'on clique sur « Rejouer dans cette salle ». Elles
+  se trouvent dans le tableau `PUZZLES`, identique dans `server.js` et
   `public/index.html` — dis-moi si tu veux que j'en ajoute d'autres.

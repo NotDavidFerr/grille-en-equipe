@@ -6,33 +6,114 @@ const os = require('os');
 const PORT = process.env.PORT || 3000;
 
 // ---------------- Puzzle data (mirrors the client) ----------------
-const PUZZLES = [
-  {
-    id: 'p1',
-    rows: 5, cols: 7,
-    cells: {
-      '0-2': { type: 'clue', dir: 'down', text: 'Meuble pour dormir' },
-      '0-3': { type: 'clue', dir: 'down', text: 'Copain, pas de la famille' },
-      '0-4': { type: 'clue', dir: 'down', text: 'Lieu avec des trains' },
-      '1-0': { type: 'clue', dir: 'right', text: "Bord de mer où l'on se baigne" },
-      '1-1': { type: 'letter', answer: 'P' },
-      '1-2': { type: 'letter', answer: 'L' },
-      '1-3': { type: 'letter', answer: 'A' },
-      '1-4': { type: 'letter', answer: 'G' },
-      '1-5': { type: 'letter', answer: 'E' },
-      '2-2': { type: 'letter', answer: 'I' },
-      '2-3': { type: 'letter', answer: 'M' },
-      '2-4': { type: 'letter', answer: 'A' },
-      '3-2': { type: 'letter', answer: 'T' },
-      '3-3': { type: 'letter', answer: 'I' },
-      '3-4': { type: 'letter', answer: 'R' },
-      '4-3': { type: 'clue', dir: 'right', text: 'Saison chaude' },
-      '4-4': { type: 'letter', answer: 'E' },
-      '4-5': { type: 'letter', answer: 'T' },
-      '4-6': { type: 'letter', answer: 'E' },
-    }
-  }
-];
+  const PUZZLES = [
+    {
+      id: 'p1', theme: 'Généraliste', rows: 5, cols: 7,
+      cells: {
+        '0-2': {type:'clue', dir:'down', text:'Meuble pour dormir'},
+        '0-3': {type:'clue', dir:'down', text:'Copain, pas de la famille'},
+        '0-4': {type:'clue', dir:'down', text:'Lieu avec des trains'},
+        '1-0': {type:'clue', dir:'right', text:'Bord de mer où l\'on se baigne'},
+        '1-1': {type:'letter', answer:'P'},
+        '1-2': {type:'letter', answer:'L'},
+        '1-3': {type:'letter', answer:'A'},
+        '1-4': {type:'letter', answer:'G'},
+        '1-5': {type:'letter', answer:'E'},
+        '2-2': {type:'letter', answer:'I'},
+        '2-3': {type:'letter', answer:'M'},
+        '2-4': {type:'letter', answer:'A'},
+        '3-2': {type:'letter', answer:'T'},
+        '3-3': {type:'letter', answer:'I'},
+        '3-4': {type:'letter', answer:'R'},
+        '4-3': {type:'clue', dir:'right', text:'Saison chaude'},
+        '4-4': {type:'letter', answer:'E'},
+        '4-5': {type:'letter', answer:'T'},
+        '4-6': {type:'letter', answer:'E'},
+      }
+    },
+    {
+      id: 'p2', theme: 'Cuisine', rows: 5, cols: 8,
+      cells: {
+        '0-2': {type:'clue', dir:'down', text:'Petit bulbe qui parfume les plats'},
+        '0-4': {type:'clue', dir:'down', text:'Liquide qu\'on boit'},
+        '1-0': {type:'clue', dir:'right', text:'Dessert sucré qu\'on cuit au four'},
+        '1-1': {type:'letter', answer:'G'},
+        '1-2': {type:'letter', answer:'A'},
+        '1-3': {type:'letter', answer:'T'},
+        '1-4': {type:'letter', answer:'E'},
+        '1-5': {type:'letter', answer:'A'},
+        '1-6': {type:'letter', answer:'U'},
+        '2-2': {type:'letter', answer:'I'},
+        '2-4': {type:'letter', answer:'A'},
+        '3-2': {type:'letter', answer:'L'},
+        '3-4': {type:'letter', answer:'U'},
+        '4-4': {type:'clue', dir:'right', text:'Boisson chaude, feuilles infusées'},
+        '4-5': {type:'letter', answer:'T'},
+        '4-6': {type:'letter', answer:'H'},
+        '4-7': {type:'letter', answer:'E'},
+      }
+    },
+    {
+      id: 'p3', theme: 'Voyage', rows: 6, cols: 6,
+      cells: {
+        '0-2': {type:'clue', dir:'down', text:'Document nécessaire pour entrer dans un pays'},
+        '0-4': {type:'clue', dir:'down', text:'Grande étendue d\'eau salée'},
+        '1-0': {type:'clue', dir:'right', text:'Appareil qui vole, avec des ailes'},
+        '1-1': {type:'letter', answer:'A'},
+        '1-2': {type:'letter', answer:'V'},
+        '1-3': {type:'letter', answer:'I'},
+        '1-4': {type:'letter', answer:'O'},
+        '1-5': {type:'letter', answer:'N'},
+        '2-2': {type:'letter', answer:'I'},
+        '2-4': {type:'letter', answer:'C'},
+        '3-2': {type:'letter', answer:'S'},
+        '3-4': {type:'letter', answer:'E'},
+        '4-2': {type:'letter', answer:'A'},
+        '4-4': {type:'letter', answer:'A'},
+        '5-4': {type:'letter', answer:'N'},
+      }
+    },
+    {
+      id: 'p4', theme: 'Cinéma', rows: 6, cols: 6,
+      cells: {
+        '0-2': {type:'clue', dir:'down', text:'Bref, de courte durée (ex: film ~)'},
+        '0-4': {type:'clue', dir:'down', text:'Septième art, c\'est le cinéma'},
+        '1-0': {type:'clue', dir:'right', text:'Surface blanche où l\'on projette un film'},
+        '1-1': {type:'letter', answer:'E'},
+        '1-2': {type:'letter', answer:'C'},
+        '1-3': {type:'letter', answer:'R'},
+        '1-4': {type:'letter', answer:'A'},
+        '1-5': {type:'letter', answer:'N'},
+        '2-2': {type:'letter', answer:'O'},
+        '2-4': {type:'letter', answer:'R'},
+        '3-2': {type:'letter', answer:'U'},
+        '3-4': {type:'letter', answer:'T'},
+        '4-2': {type:'letter', answer:'R'},
+        '5-2': {type:'letter', answer:'T'},
+      }
+    },
+    {
+      id: 'p5', theme: 'Sport', rows: 6, cols: 7,
+      cells: {
+        '0-3': {type:'clue', dir:'down', text:'Sport de combat au corps à corps'},
+        '0-6': {type:'clue', dir:'down', text:'Se déplacer dans l\'eau'},
+        '1-0': {type:'clue', dir:'right', text:'Objet rond qu\'on shoote ou qu\'on lance'},
+        '1-1': {type:'letter', answer:'B'},
+        '1-2': {type:'letter', answer:'A'},
+        '1-3': {type:'letter', answer:'L'},
+        '1-4': {type:'letter', answer:'L'},
+        '1-5': {type:'letter', answer:'O'},
+        '1-6': {type:'letter', answer:'N'},
+        '2-3': {type:'letter', answer:'U'},
+        '2-6': {type:'letter', answer:'A'},
+        '3-3': {type:'letter', answer:'T'},
+        '3-6': {type:'letter', answer:'G'},
+        '4-3': {type:'letter', answer:'T'},
+        '4-6': {type:'letter', answer:'E'},
+        '5-3': {type:'letter', answer:'E'},
+      }
+    },
+  ];
 
 const PLAYER_COLORS = ['#C98A3A', '#4F7959', '#4468A6', '#A6467A'];
 const CODE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
@@ -112,9 +193,10 @@ const server = http.createServer(async (req, res) => {
     // POST /api/rooms  -> create room
     if (req.method === 'POST' && parts.length === 2) {
       const code = genCode();
+      const puzzle = PUZZLES[Math.floor(Math.random() * PUZZLES.length)];
       const room = {
         code,
-        puzzleId: PUZZLES[0].id,
+        puzzleId: puzzle.id,
         players: [],
         grid: {},
         status: 'lobby',
@@ -191,6 +273,8 @@ const server = http.createServer(async (req, res) => {
       // POST /api/rooms/:code/reset
       if (req.method === 'POST' && parts[3] === 'reset') {
         if (!room) { sendJSON(res, 404, { error: 'not_found' }); return; }
+        const puzzle = PUZZLES[Math.floor(Math.random() * PUZZLES.length)];
+        room.puzzleId = puzzle.id;
         room.status = 'lobby';
         room.grid = {};
         room.startedAt = null;

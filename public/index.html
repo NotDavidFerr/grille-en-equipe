@@ -110,9 +110,12 @@
   .grid{ display: grid; gap: 3px; width: max-content; margin: 0 auto; background: var(--ink); padding: 3px; border-radius: 8px; }
   .cell{ width: 44px; height: 44px; display:flex; align-items:center; justify-content:center; position: relative; }
   .cell.black{ background: var(--black-cell); border-radius: 3px; }
-  .cell.clue{ background: var(--amber); color: #2b2210; border-radius: 3px; font-size: 8.2px; line-height: 1.05; text-align:left; padding: 3px 4px; font-weight:600; overflow:hidden; }
+  .cell.clue{ background: var(--amber); color: #2b2210; border-radius: 3px; font-size: 8.2px; line-height: 1.05; text-align:left; padding: 3px 4px; font-weight:600; overflow:hidden; cursor:pointer; }
+  .cell.clue.active{ outline: 2.5px solid var(--ink); outline-offset: -2.5px; }
   .cell.clue .arrow{ position:absolute; font-size: 13px; font-weight:700; right:3px; bottom:2px; }
   .cell.letter{ background: #fbf8f0; border-radius: 3px; }
+  .cell.letter.active{ background: #fff0c9; }
+  .cell.letter.active input{ background: transparent; }
   .cell.letter input{
     width:100%; height:100%; text-align:center; border:none; background:transparent;
     font-family:'Fraunces',serif; font-size: 19px; font-weight:600; color: var(--ink);
@@ -138,12 +141,12 @@
 (function(){
   const PUZZLES = [
     {
-      id: 'p1', rows: 5, cols: 7,
+      id: 'p1', theme: 'Généraliste', rows: 5, cols: 7,
       cells: {
         '0-2': {type:'clue', dir:'down', text:'Meuble pour dormir'},
         '0-3': {type:'clue', dir:'down', text:'Copain, pas de la famille'},
         '0-4': {type:'clue', dir:'down', text:'Lieu avec des trains'},
-        '1-0': {type:'clue', dir:'right', text:'Bord de mer où l\u2019on se baigne'},
+        '1-0': {type:'clue', dir:'right', text:'Bord de mer où l\'on se baigne'},
         '1-1': {type:'letter', answer:'P'},
         '1-2': {type:'letter', answer:'L'},
         '1-3': {type:'letter', answer:'A'},
@@ -160,8 +163,91 @@
         '4-5': {type:'letter', answer:'T'},
         '4-6': {type:'letter', answer:'E'},
       }
-    }
+    },
+    {
+      id: 'p2', theme: 'Cuisine', rows: 5, cols: 8,
+      cells: {
+        '0-2': {type:'clue', dir:'down', text:'Petit bulbe qui parfume les plats'},
+        '0-4': {type:'clue', dir:'down', text:'Liquide qu\'on boit'},
+        '1-0': {type:'clue', dir:'right', text:'Dessert sucré qu\'on cuit au four'},
+        '1-1': {type:'letter', answer:'G'},
+        '1-2': {type:'letter', answer:'A'},
+        '1-3': {type:'letter', answer:'T'},
+        '1-4': {type:'letter', answer:'E'},
+        '1-5': {type:'letter', answer:'A'},
+        '1-6': {type:'letter', answer:'U'},
+        '2-2': {type:'letter', answer:'I'},
+        '2-4': {type:'letter', answer:'A'},
+        '3-2': {type:'letter', answer:'L'},
+        '3-4': {type:'letter', answer:'U'},
+        '4-4': {type:'clue', dir:'right', text:'Boisson chaude, feuilles infusées'},
+        '4-5': {type:'letter', answer:'T'},
+        '4-6': {type:'letter', answer:'H'},
+        '4-7': {type:'letter', answer:'E'},
+      }
+    },
+    {
+      id: 'p3', theme: 'Voyage', rows: 6, cols: 6,
+      cells: {
+        '0-2': {type:'clue', dir:'down', text:'Document nécessaire pour entrer dans un pays'},
+        '0-4': {type:'clue', dir:'down', text:'Grande étendue d\'eau salée'},
+        '1-0': {type:'clue', dir:'right', text:'Appareil qui vole, avec des ailes'},
+        '1-1': {type:'letter', answer:'A'},
+        '1-2': {type:'letter', answer:'V'},
+        '1-3': {type:'letter', answer:'I'},
+        '1-4': {type:'letter', answer:'O'},
+        '1-5': {type:'letter', answer:'N'},
+        '2-2': {type:'letter', answer:'I'},
+        '2-4': {type:'letter', answer:'C'},
+        '3-2': {type:'letter', answer:'S'},
+        '3-4': {type:'letter', answer:'E'},
+        '4-2': {type:'letter', answer:'A'},
+        '4-4': {type:'letter', answer:'A'},
+        '5-4': {type:'letter', answer:'N'},
+      }
+    },
+    {
+      id: 'p4', theme: 'Cinéma', rows: 6, cols: 6,
+      cells: {
+        '0-2': {type:'clue', dir:'down', text:'Bref, de courte durée (ex: film ~)'},
+        '0-4': {type:'clue', dir:'down', text:'Septième art, c\'est le cinéma'},
+        '1-0': {type:'clue', dir:'right', text:'Surface blanche où l\'on projette un film'},
+        '1-1': {type:'letter', answer:'E'},
+        '1-2': {type:'letter', answer:'C'},
+        '1-3': {type:'letter', answer:'R'},
+        '1-4': {type:'letter', answer:'A'},
+        '1-5': {type:'letter', answer:'N'},
+        '2-2': {type:'letter', answer:'O'},
+        '2-4': {type:'letter', answer:'R'},
+        '3-2': {type:'letter', answer:'U'},
+        '3-4': {type:'letter', answer:'T'},
+        '4-2': {type:'letter', answer:'R'},
+        '5-2': {type:'letter', answer:'T'},
+      }
+    },
+    {
+      id: 'p5', theme: 'Sport', rows: 6, cols: 7,
+      cells: {
+        '0-3': {type:'clue', dir:'down', text:'Sport de combat au corps à corps'},
+        '0-6': {type:'clue', dir:'down', text:'Se déplacer dans l\'eau'},
+        '1-0': {type:'clue', dir:'right', text:'Objet rond qu\'on shoote ou qu\'on lance'},
+        '1-1': {type:'letter', answer:'B'},
+        '1-2': {type:'letter', answer:'A'},
+        '1-3': {type:'letter', answer:'L'},
+        '1-4': {type:'letter', answer:'L'},
+        '1-5': {type:'letter', answer:'O'},
+        '1-6': {type:'letter', answer:'N'},
+        '2-3': {type:'letter', answer:'U'},
+        '2-6': {type:'letter', answer:'A'},
+        '3-3': {type:'letter', answer:'T'},
+        '3-6': {type:'letter', answer:'G'},
+        '4-3': {type:'letter', answer:'T'},
+        '4-6': {type:'letter', answer:'E'},
+        '5-3': {type:'letter', answer:'E'},
+      }
+    },
   ];
+
 
   function buildGridMap(puzzle){
     const map = {};
@@ -174,6 +260,30 @@
     return map;
   }
 
+  // For each clue cell, list the ordered cells that form its word.
+  function computeWords(puzzle){
+    const words = [];
+    Object.keys(puzzle.cells).forEach(key => {
+      const def = puzzle.cells[key];
+      if(def.type !== 'clue') return;
+      const [r,c] = key.split('-').map(Number);
+      const cells = [];
+      if(def.dir === 'right'){
+        let cc = c+1;
+        while(cc < puzzle.cols && puzzle.cells[r+'-'+cc] && puzzle.cells[r+'-'+cc].type === 'letter'){
+          cells.push(r+'-'+cc); cc++;
+        }
+      } else {
+        let rr = r+1;
+        while(rr < puzzle.rows && puzzle.cells[rr+'-'+c] && puzzle.cells[rr+'-'+c].type === 'letter'){
+          cells.push(rr+'-'+c); rr++;
+        }
+      }
+      words.push({ id: key, dir: def.dir, text: def.text, cells });
+    });
+    return words;
+  }
+
   const state = {
     screen: 'home',
     code: null,
@@ -184,6 +294,7 @@
     tickTimer: null,
     error: null,
     busy: false,
+    activeWordId: null,
   };
 
   async function api(path, opts){
@@ -294,15 +405,64 @@
   function focusNext(key){
     setTimeout(() => {
       const puzzle = getPuzzle();
-      const [r,c] = key.split('-').map(Number);
-      for(let cc = c+1; cc < puzzle.cols; cc++){
-        const k = r+'-'+cc;
-        if(puzzle.cells[k] && puzzle.cells[k].type === 'letter'){
-          const el = document.querySelector('[data-key="'+k+'"] input');
-          if(el){ el.focus(); return; }
-        } else break;
+      const words = computeWords(puzzle);
+      let word = words.find(w => w.id === state.activeWordId && w.cells.includes(key));
+      if(!word) word = words.find(w => w.cells.includes(key));
+      if(!word) return;
+      const idx = word.cells.indexOf(key);
+      const nextKey = word.cells[idx+1];
+      if(nextKey){
+        const el = document.querySelector('.cell.letter[data-key="'+nextKey+'"] input');
+        if(el) el.focus();
       }
     }, 10);
+  }
+
+  function focusPrev(key){
+    const puzzle = getPuzzle();
+    const words = computeWords(puzzle);
+    let word = words.find(w => w.id === state.activeWordId && w.cells.includes(key));
+    if(!word) word = words.find(w => w.cells.includes(key));
+    if(!word) return;
+    const idx = word.cells.indexOf(key);
+    const prevKey = word.cells[idx-1];
+    if(prevKey){
+      const el = document.querySelector('.cell.letter[data-key="'+prevKey+'"] input');
+      if(el) el.focus();
+    }
+  }
+
+  function selectWord(wordId){
+    state.activeWordId = wordId;
+    applyActiveWordHighlight();
+    const puzzle = getPuzzle();
+    const words = computeWords(puzzle);
+    const word = words.find(w => w.id === wordId);
+    if(word && word.cells.length){
+      const el = document.querySelector('.cell.letter[data-key="'+word.cells[0]+'"] input');
+      if(el) el.focus();
+    }
+  }
+
+  function applyActiveWordHighlight(){
+    if(state.screen !== 'game') return;
+    const puzzle = getPuzzle();
+    const words = computeWords(puzzle);
+    const word = words.find(w => w.id === state.activeWordId);
+    document.querySelectorAll('.cell.letter.active').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.cell.clue.active').forEach(el => el.classList.remove('active'));
+    const banner = document.getElementById('clue-banner-text');
+    if(word){
+      word.cells.forEach(k => {
+        const el = document.querySelector('.cell.letter[data-key="'+k+'"]');
+        if(el) el.classList.add('active');
+      });
+      const clueEl = document.querySelector('.cell.clue[data-wordid="'+word.id+'"]');
+      if(clueEl) clueEl.classList.add('active');
+      if(banner) banner.textContent = (word.dir === 'right' ? '→ ' : '↓ ') + word.text;
+    } else if(banner){
+      banner.textContent = "Touchez une définition en jaune pour écrire le mot correspondant, lettre par lettre.";
+    }
   }
 
   function elapsedSeconds(){
@@ -321,6 +481,7 @@
     else if(state.screen === 'game') app.innerHTML = renderGame();
     else if(state.screen === 'end') app.innerHTML = renderEnd();
     attachHandlers();
+    if(state.screen === 'game') applyActiveWordHighlight();
   }
 
   function renderHome(){
@@ -353,10 +514,12 @@
     const room = state.room;
     const players = room.players;
     const isHost = players.find(p => p.id === state.myId && p.host);
+    const puzzle = getPuzzle();
     return `
       <div class="brand"><h1 class="display" style="font-size:22px;">Salle d'attente</h1></div>
       <p style="font-size:13px; color:var(--ink-soft); margin-bottom:2px;">Partage ce code avec ton équipe :</p>
       <div class="room-code">${room.code}</div>
+      <p style="text-align:center; font-size:13px; color:var(--ink-soft); margin:-6px 0 14px;">Grille tirée au sort — thème : <strong style="color:var(--ink);">${escapeHtml(puzzle.theme || '—')}</strong></p>
       <div class="players-list">
         ${players.map(p => `
           <div class="player-row">
@@ -380,6 +543,10 @@
     const gridMap = buildGridMap(puzzle);
     const grid = room.grid || {};
     const sec = elapsedSeconds();
+    if(!state.activeWordId){
+      const words = computeWords(puzzle);
+      if(words.length) state.activeWordId = words[0].id;
+    }
 
     let cellsHtml = '';
     for(let r=0;r<puzzle.rows;r++){
@@ -390,7 +557,7 @@
           cellsHtml += `<div class="cell black"></div>`;
         } else if(def.type === 'clue'){
           const arrow = def.dir === 'right' ? '→' : '↓';
-          cellsHtml += `<div class="cell clue"><span>${escapeHtml(def.text)}</span><span class="arrow">${arrow}</span></div>`;
+          cellsHtml += `<div class="cell clue" data-wordid="${key}"><span>${escapeHtml(def.text)}</span><span class="arrow">${arrow}</span></div>`;
         } else {
           const filled = grid[key];
           const isCorrect = filled && filled.letter === def.answer;
@@ -408,12 +575,13 @@
     return `
       <div class="topbar">
         <div class="stat"><div class="num">${fmtTime(sec)}</div><div class="lbl">temps</div></div>
+        <div class="stat"><div class="num" style="font-size:15px;">${escapeHtml(puzzle.theme || '—')}</div><div class="lbl">thème</div></div>
         <div class="stat"><div class="num">${room.code}</div><div class="lbl">salle</div></div>
       </div>
       <div class="avatars-row">
         ${room.players.map(p => `<div class="avatar" style="background:${p.color}" title="${escapeHtml(p.name)}">${initials(p.name)}</div>`).join('')}
       </div>
-      <div class="clue-banner"><span class="arrow">✎</span><span>Remplissez la grille ensemble — chaque case validée compte pour l'équipe.</span></div>
+      <div class="clue-banner"><span class="arrow">✎</span><span id="clue-banner-text">Touchez une définition en jaune pour écrire le mot correspondant, lettre par lettre.</span></div>
       <div class="grid-wrap">
         <div class="grid" style="grid-template-columns: repeat(${puzzle.cols}, 44px);">
           ${cellsHtml}
@@ -464,9 +632,30 @@
     }
     if(byId('btn-launch')) byId('btn-launch').addEventListener('click', launchGame);
     if(byId('btn-again')) byId('btn-again').addEventListener('click', playAgain);
+    document.querySelectorAll('.cell.clue[data-wordid]').forEach(el => {
+      el.addEventListener('click', () => selectWord(el.getAttribute('data-wordid')));
+    });
     document.querySelectorAll('input[data-cellkey]').forEach(inp => {
       inp.addEventListener('input', (e) => handleLetterInput(e.target.getAttribute('data-cellkey'), e.target.value));
-      inp.addEventListener('focus', (e) => e.target.select());
+      inp.addEventListener('focus', (e) => {
+        e.target.select();
+        const key = e.target.getAttribute('data-cellkey');
+        const puzzle = getPuzzle();
+        const words = computeWords(puzzle);
+        const stillValid = state.activeWordId && words.find(w => w.id === state.activeWordId && w.cells.includes(key));
+        if(!stillValid){
+          const w = words.find(w => w.cells.includes(key));
+          state.activeWordId = w ? w.id : state.activeWordId;
+        }
+        applyActiveWordHighlight();
+      });
+      inp.addEventListener('keydown', (e) => {
+        const key = e.target.getAttribute('data-cellkey');
+        if(e.key === 'Backspace' && !e.target.value){
+          e.preventDefault();
+          focusPrev(key);
+        }
+      });
     });
   }
 
