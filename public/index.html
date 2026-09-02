@@ -113,17 +113,21 @@
   .cell.clue{ background: var(--amber); color: #2b2210; border-radius: 3px; font-size: 8.2px; line-height: 1.05; text-align:left; padding: 3px 4px; font-weight:600; overflow:hidden; cursor:pointer; }
   .cell.clue.active{ outline: 2.5px solid var(--ink); outline-offset: -2.5px; }
   .cell.clue .arrow{ position:absolute; font-size: 13px; font-weight:700; right:3px; bottom:2px; }
-  .cell.letter{ background: #fbf8f0; border-radius: 3px; }
+  .cell.letter{ background: #fbf8f0; border-radius: 3px; cursor: pointer; user-select: none; }
   .cell.letter.active{ background: #fff0c9; }
-  .cell.letter.active input{ background: transparent; }
-  .cell.letter input{
-    width:100%; height:100%; text-align:center; border:none; background:transparent;
+  .cell.letter.current{ background: #ffe08a; box-shadow: inset 0 0 0 2px var(--ink); }
+  .cell.letter .letter-text{
     font-family:'Fraunces',serif; font-size: 19px; font-weight:600; color: var(--ink);
-    text-transform: uppercase; padding:0; border-radius:3px;
+    text-transform: uppercase; line-height:1;
   }
-  .cell.letter input:focus{ outline:none; background: #fff5e0; }
-  .cell.letter.correct input{ background: #e4efe6; color: var(--green); }
+  .cell.letter.correct{ background: #e4efe6; }
+  .cell.letter.correct .letter-text{ color: var(--green); }
   .cell.letter .dot{ position:absolute; bottom:2px; right:2px; width:7px; height:7px; border-radius:50%; }
+  .hidden-input{
+    position: fixed; top: -1000px; left: -1000px;
+    width: 1px; height: 1px; opacity: 0; border: none; padding: 0;
+    font-size: 16px; /* évite le zoom automatique sur iOS */
+  }
 
   .clue-banner{ background: var(--ink); color: var(--paper); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; font-size: 13.5px; display:flex; align-items:center; gap:10px; min-height: 20px; }
   .clue-banner .arrow{ font-size:16px; color: var(--amber); flex-shrink:0; }
@@ -199,6 +203,7 @@
     error: null,
     busy: false,
     activeWordId: null,
+    cursorIndex: 0,
   };
 
   async function api(path, opts){
@@ -295,73 +300,118 @@
     return PUZZLES.find(p => p.id === id) || PUZZLES[0];
   }
 
-  async function handleLetterInput(key, rawVal){
-    const val = (rawVal || '').slice(-1).toUpperCase();
-    try{
-      state.room = await api('/api/rooms/' + state.code + '/cell', {
-        method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ key, letter: val, playerId: state.myId, color: state.myColor })
-      });
-      if(state.room.status === 'finished') state.screen = 'end';
-    }catch(e){ /* on retentera au prochain sondage */ }
-    render();
-    focusNext(key);
+  function getActiveWord(){
+    const puzzle = getPuzzle();
+    const words = computeWords(puzzle);
+    return words.find(w => w.id === state.activeWordId) || null;
   }
 
-  function focusNext(key){
-    setTimeout(() => {
-      const puzzle = getPuzzle();
-      const words = computeWords(puzzle);
-      let word = words.find(w => w.id === state.activeWordId && w.cells.includes(key));
-      if(!word) word = words.find(w => w.cells.includes(key));
-      if(!word) return;
-      const idx = word.cells.indexOf(key);
-      const nextKey = word.cells[idx+1];
-      if(nextKey){
-        const el = document.querySelector('.cell.letter[data-key="'+nextKey+'"] input');
-        if(el) el.focus();
-      }
-    }, 10);
+  function firstEmptyIndex(word){
+    const grid = (state.room && state.room.grid) || {};
+    for(let i=0;i<word.cells.length;i++){
+      if(!grid[word.cells[i]]) return i;
+    }
+    return 0;
   }
 
-  function focusPrev(key){
+  function focusHiddenInput(){
+    const el = document.getElementById('cell-input');
+    if(el) el.focus({ preventScroll: true });
+  }
+
+  function selectWord(wordId, atIndex){
+    const puzzle = getPuzzle();
+    const words = computeWords(puzzle);
+    const word = words.find(w => w.id === wordId);
+    if(!word) return;
+    state.activeWordId = wordId;
+    state.cursorIndex = (typeof atIndex === 'number') ? atIndex : firstEmptyIndex(word);
+    applyActiveWordHighlight();
+    focusHiddenInput();
+  }
+
+  function selectCell(key){
     const puzzle = getPuzzle();
     const words = computeWords(puzzle);
     let word = words.find(w => w.id === state.activeWordId && w.cells.includes(key));
     if(!word) word = words.find(w => w.cells.includes(key));
     if(!word) return;
-    const idx = word.cells.indexOf(key);
-    const prevKey = word.cells[idx-1];
-    if(prevKey){
-      const el = document.querySelector('.cell.letter[data-key="'+prevKey+'"] input');
-      if(el) el.focus();
+    state.activeWordId = word.id;
+    state.cursorIndex = word.cells.indexOf(key);
+    applyActiveWordHighlight();
+    focusHiddenInput();
+  }
+
+  // Move to the next word (in grid order) that still has an empty cell.
+  function advanceToNextWord(){
+    const puzzle = getPuzzle();
+    const words = computeWords(puzzle);
+    if(!words.length) return;
+    const grid = (state.room && state.room.grid) || {};
+    const curIdx = words.findIndex(w => w.id === state.activeWordId);
+    for(let step=1; step<=words.length; step++){
+      const w = words[(curIdx + step) % words.length];
+      const isFull = w.cells.every(k => grid[k]);
+      if(!isFull){
+        state.activeWordId = w.id;
+        state.cursorIndex = firstEmptyIndex(w);
+        return;
+      }
     }
   }
 
-  function selectWord(wordId){
-    state.activeWordId = wordId;
-    applyActiveWordHighlight();
-    const puzzle = getPuzzle();
-    const words = computeWords(puzzle);
-    const word = words.find(w => w.id === wordId);
-    if(word && word.cells.length){
-      const el = document.querySelector('.cell.letter[data-key="'+word.cells[0]+'"] input');
-      if(el) el.focus();
+  async function typeChar(ch){
+    const word = getActiveWord();
+    if(!word || state.cursorIndex >= word.cells.length) return;
+    const key = word.cells[state.cursorIndex];
+    try{
+      state.room = await api('/api/rooms/' + state.code + '/cell', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ key, letter: ch, playerId: state.myId, color: state.myColor })
+      });
+      if(state.room.status === 'finished'){ state.screen = 'end'; render(); return; }
+    }catch(e){ /* on retentera au prochain sondage */ }
+
+    if(state.cursorIndex < word.cells.length - 1){
+      state.cursorIndex += 1;
+    } else {
+      advanceToNextWord();
     }
+    render();
+  }
+
+  async function doBackspace(){
+    const word = getActiveWord();
+    if(!word) return;
+    let idx = state.cursorIndex;
+    const grid = (state.room && state.room.grid) || {};
+    // if current cell already empty, step back first
+    if(idx > 0 && !grid[word.cells[idx]]) idx -= 1;
+    const key = word.cells[idx];
+    state.cursorIndex = idx;
+    try{
+      state.room = await api('/api/rooms/' + state.code + '/cell', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ key, letter: '', playerId: state.myId, color: state.myColor })
+      });
+    }catch(e){ /* on retentera au prochain sondage */ }
+    render();
   }
 
   function applyActiveWordHighlight(){
     if(state.screen !== 'game') return;
-    const puzzle = getPuzzle();
-    const words = computeWords(puzzle);
-    const word = words.find(w => w.id === state.activeWordId);
+    const word = getActiveWord();
     document.querySelectorAll('.cell.letter.active').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.cell.letter.current').forEach(el => el.classList.remove('current'));
     document.querySelectorAll('.cell.clue.active').forEach(el => el.classList.remove('active'));
     const banner = document.getElementById('clue-banner-text');
     if(word){
-      word.cells.forEach(k => {
+      word.cells.forEach((k, i) => {
         const el = document.querySelector('.cell.letter[data-key="'+k+'"]');
-        if(el) el.classList.add('active');
+        if(el){
+          el.classList.add('active');
+          if(i === state.cursorIndex) el.classList.add('current');
+        }
       });
       const clueEl = document.querySelector('.cell.clue[data-wordid="'+word.id+'"]');
       if(clueEl) clueEl.classList.add('active');
@@ -381,13 +431,17 @@
   function initials(name){ return (name||'?').trim().slice(0,2).toUpperCase(); }
 
   function render(){
+    const wasTyping = document.activeElement && document.activeElement.id === 'cell-input';
     const app = document.getElementById('app');
     if(state.screen === 'home') app.innerHTML = renderHome();
     else if(state.screen === 'lobby') app.innerHTML = renderLobby();
     else if(state.screen === 'game') app.innerHTML = renderGame();
     else if(state.screen === 'end') app.innerHTML = renderEnd();
     attachHandlers();
-    if(state.screen === 'game') applyActiveWordHighlight();
+    if(state.screen === 'game'){
+      applyActiveWordHighlight();
+      if(wasTyping) focusHiddenInput();
+    }
   }
 
   function renderHome(){
@@ -451,7 +505,10 @@
     const sec = elapsedSeconds();
     if(!state.activeWordId){
       const words = computeWords(puzzle);
-      if(words.length) state.activeWordId = words[0].id;
+      if(words.length){
+        state.activeWordId = words[0].id;
+        state.cursorIndex = firstEmptyIndex(words[0]);
+      }
     }
 
     let cellsHtml = '';
@@ -469,9 +526,7 @@
           const isCorrect = filled && filled.letter === def.answer;
           cellsHtml += `
             <div class="cell letter ${isCorrect ? 'correct':''}" data-key="${key}">
-              <input type="text" maxlength="1" inputmode="text" autocomplete="off"
-                autocapitalize="characters" data-cellkey="${key}"
-                value="${filled ? escapeHtml(filled.letter) : ''}">
+              <span class="letter-text">${filled ? escapeHtml(filled.letter) : ''}</span>
               ${filled ? `<span class="dot" style="background:${filled.color}"></span>` : ''}
             </div>`;
         }
@@ -493,7 +548,8 @@
           ${cellsHtml}
         </div>
       </div>
-      <p class="footer-note">Touchez une case pour écrire une lettre. Le score final dépend de votre rapidité.</p>
+      <input id="cell-input" class="hidden-input" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false">
+      <p class="footer-note">Touchez une case pour écrire — le clavier reste ouvert, les lettres s'enchaînent toutes seules.</p>
     `;
   }
 
@@ -541,28 +597,31 @@
     document.querySelectorAll('.cell.clue[data-wordid]').forEach(el => {
       el.addEventListener('click', () => selectWord(el.getAttribute('data-wordid')));
     });
-    document.querySelectorAll('input[data-cellkey]').forEach(inp => {
-      inp.addEventListener('input', (e) => handleLetterInput(e.target.getAttribute('data-cellkey'), e.target.value));
-      inp.addEventListener('focus', (e) => {
-        e.target.select();
-        const key = e.target.getAttribute('data-cellkey');
-        const puzzle = getPuzzle();
-        const words = computeWords(puzzle);
-        const stillValid = state.activeWordId && words.find(w => w.id === state.activeWordId && w.cells.includes(key));
-        if(!stillValid){
-          const w = words.find(w => w.cells.includes(key));
-          state.activeWordId = w ? w.id : state.activeWordId;
-        }
-        applyActiveWordHighlight();
-      });
-      inp.addEventListener('keydown', (e) => {
-        const key = e.target.getAttribute('data-cellkey');
-        if(e.key === 'Backspace' && !e.target.value){
-          e.preventDefault();
-          focusPrev(key);
-        }
-      });
+    document.querySelectorAll('.cell.letter[data-key]').forEach(el => {
+      el.addEventListener('click', () => selectCell(el.getAttribute('data-key')));
     });
+    const cellInput = byId('cell-input');
+    if(cellInput){
+      cellInput.addEventListener('input', (e) => {
+        const inputType = e.inputType || '';
+        if(inputType.indexOf('delete') !== -1){
+          e.target.value = '';
+          return;
+        }
+        const val = e.target.value;
+        e.target.value = '';
+        if(val){
+          const ch = val.slice(-1).toUpperCase();
+          typeChar(ch);
+        }
+      });
+      cellInput.addEventListener('keydown', (e) => {
+        if(e.key === 'Backspace'){
+          e.preventDefault();
+          doBackspace();
+        }
+      });
+    }
   }
 
   function shake(id){
