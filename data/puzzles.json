@@ -2,77 +2,142 @@
   {
     "id": "p1",
     "theme": "Généraliste",
-    "rows": 5,
-    "cols": 7,
+    "rows": 10,
+    "cols": 10,
     "cells": {
-      "0-2": {
+      "0-1": {
         "type": "clue",
         "dir": "down",
-        "text": "Meuble pour dormir"
-      },
-      "0-3": {
-        "type": "clue",
-        "dir": "down",
-        "text": "Copain, pas de la famille"
+        "text": "Grand rapace"
       },
       "0-4": {
         "type": "clue",
         "dir": "down",
-        "text": "Lieu avec des trains"
+        "text": "Capitale de l'Italie"
       },
-      "1-0": {
+      "0-5": {
         "type": "clue",
-        "dir": "right",
-        "text": "Bord de mer où l'on se baigne"
+        "dir": "down",
+        "text": "Personne qui utilise une machine"
+      },
+      "0-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Professionnel de la cuisine"
+      },
+      "0-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Saut en élévation"
       },
       "1-1": {
         "type": "letter",
-        "answer": "P"
+        "answer": "A"
       },
       "1-2": {
-        "type": "letter",
-        "answer": "L"
+        "type": "clue",
+        "dir": "down",
+        "text": "Arbre aux pommes"
       },
       "1-3": {
-        "type": "letter",
-        "answer": "A"
+        "type": "clue",
+        "dir": "right",
+        "text": "Pierre naturelle"
       },
       "1-4": {
         "type": "letter",
-        "answer": "G"
+        "answer": "R"
       },
       "1-5": {
         "type": "letter",
+        "answer": "O"
+      },
+      "1-6": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "1-7": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "1-8": {
+        "type": "letter",
         "answer": "E"
+      },
+      "2-1": {
+        "type": "letter",
+        "answer": "I"
       },
       "2-2": {
         "type": "letter",
-        "answer": "I"
-      },
-      "2-3": {
-        "type": "letter",
-        "answer": "M"
+        "answer": "P"
       },
       "2-4": {
         "type": "letter",
+        "answer": "O"
+      },
+      "2-5": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "2-6": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "2-7": {
+        "type": "letter",
         "answer": "A"
+      },
+      "3-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Suc végétal"
+      },
+      "3-1": {
+        "type": "letter",
+        "answer": "G"
       },
       "3-2": {
         "type": "letter",
-        "answer": "T"
+        "answer": "O"
       },
       "3-3": {
         "type": "letter",
-        "answer": "I"
+        "answer": "M"
       },
       "3-4": {
         "type": "letter",
-        "answer": "R"
+        "answer": "M"
       },
-      "4-3": {
+      "3-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "3-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "3-8": {
         "type": "clue",
-        "dir": "right",
-        "text": "Saison chaude"
+        "dir": "down",
+        "text": "Petit appendice du voile du palais"
+      },
+      "3-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Grains fins"
+      },
+      "4-1": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "M"
       },
       "4-4": {
         "type": "letter",
@@ -80,9 +145,210 @@
       },
       "4-5": {
         "type": "letter",
-        "answer": "T"
+        "answer": "R"
       },
       "4-6": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "4-7": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "5-1": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "5-3": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Rangée d'arbustes"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "5-5": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "5-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Outil pour limer"
+      },
+      "6-1": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-9": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "7-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Moyen de transport à deux roues"
+      },
+      "7-1": {
+        "type": "letter",
+        "answer": "V"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "7-8": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "7-9": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "8-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Chaussure de tennis"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "8-3": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "8-4": {
+        "type": "letter",
+        "answer": "Q"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "8-8": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "8-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Organe qui pompe le sang"
+      },
+      "9-1": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "9-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "9-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "9-8": {
         "type": "letter",
         "answer": "E"
       }
@@ -90,28 +356,43 @@
   },
   {
     "id": "p2",
-    "theme": "Cuisine",
-    "rows": 5,
-    "cols": 8,
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
     "cells": {
       "0-2": {
         "type": "clue",
         "dir": "down",
-        "text": "Petit bulbe qui parfume les plats"
+        "text": "Pays voisin de l'est"
       },
       "0-4": {
         "type": "clue",
         "dir": "down",
-        "text": "Liquide qu'on boit"
+        "text": "Poisson à épée"
+      },
+      "0-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Sport pratiqué sur la neige"
+      },
+      "0-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Vêtement chaud"
+      },
+      "0-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Fruit tropical"
       },
       "1-0": {
         "type": "clue",
         "dir": "right",
-        "text": "Dessert sucré qu'on cuit au four"
+        "text": "Structure thoracique"
       },
       "1-1": {
         "type": "letter",
-        "answer": "G"
+        "answer": "C"
       },
       "1-2": {
         "type": "letter",
@@ -119,263 +400,3050 @@
       },
       "1-3": {
         "type": "letter",
-        "answer": "T"
+        "answer": "G"
       },
       "1-4": {
         "type": "letter",
         "answer": "E"
       },
-      "1-5": {
-        "type": "letter",
-        "answer": "A"
-      },
       "1-6": {
         "type": "letter",
-        "answer": "U"
+        "answer": "S"
+      },
+      "1-7": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "1-8": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "1-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Ensemble de phrases"
+      },
+      "2-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Fleur blanche élégante"
       },
       "2-2": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "2-3": {
         "type": "letter",
         "answer": "I"
       },
       "2-4": {
         "type": "letter",
+        "answer": "S"
+      },
+      "2-5": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Drame lyrique"
+      },
+      "2-6": {
+        "type": "letter",
+        "answer": "K"
+      },
+      "2-7": {
+        "type": "letter",
         "answer": "A"
+      },
+      "2-8": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "2-9": {
+        "type": "letter",
+        "answer": "T"
       },
       "3-2": {
         "type": "letter",
         "answer": "L"
       },
-      "3-4": {
-        "type": "letter",
-        "answer": "U"
-      },
-      "4-4": {
+      "3-3": {
         "type": "clue",
         "dir": "right",
-        "text": "Boisson chaude, feuilles infusées"
+        "text": "Avancée de terre dans la mer"
       },
-      "4-5": {
+      "3-4": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "3-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "3-8": {
         "type": "letter",
         "answer": "T"
       },
-      "4-6": {
+      "3-9": {
         "type": "letter",
-        "answer": "H"
+        "answer": "E"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-3": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Antilope du désert"
+      },
+      "4-4": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-5": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "4-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Surface d'affichage numérique"
       },
       "4-7": {
         "type": "letter",
+        "answer": "T"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "X"
+      },
+      "5-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Forme du verbe"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "5-3": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "5-5": {
+        "type": "letter",
         "answer": "E"
+      },
+      "5-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "Y"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "8-3": {
+        "type": "letter",
+        "answer": "X"
+      },
+      "8-4": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Partie arrière du pied"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "8-8": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "8-9": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "9-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Partie inférieure du visage"
+      },
+      "9-1": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "9-2": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-3": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "N"
       }
     }
   },
   {
     "id": "p3",
-    "theme": "Voyage",
-    "rows": 6,
-    "cols": 6,
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
     "cells": {
-      "0-2": {
+      "0-5": {
         "type": "clue",
         "dir": "down",
-        "text": "Document nécessaire pour entrer dans un pays"
-      },
-      "0-4": {
-        "type": "clue",
-        "dir": "down",
-        "text": "Grande étendue d'eau salée"
-      },
-      "1-0": {
-        "type": "clue",
-        "dir": "right",
-        "text": "Appareil qui vole, avec des ailes"
-      },
-      "1-1": {
-        "type": "letter",
-        "answer": "A"
-      },
-      "1-2": {
-        "type": "letter",
-        "answer": "V"
-      },
-      "1-3": {
-        "type": "letter",
-        "answer": "I"
-      },
-      "1-4": {
-        "type": "letter",
-        "answer": "O"
-      },
-      "1-5": {
-        "type": "letter",
-        "answer": "N"
-      },
-      "2-2": {
-        "type": "letter",
-        "answer": "I"
-      },
-      "2-4": {
-        "type": "letter",
-        "answer": "C"
-      },
-      "3-2": {
-        "type": "letter",
-        "answer": "S"
-      },
-      "3-4": {
-        "type": "letter",
-        "answer": "E"
-      },
-      "4-2": {
-        "type": "letter",
-        "answer": "A"
-      },
-      "4-4": {
-        "type": "letter",
-        "answer": "A"
-      },
-      "5-4": {
-        "type": "letter",
-        "answer": "N"
-      }
-    }
-  },
-  {
-    "id": "p4",
-    "theme": "Cinéma",
-    "rows": 6,
-    "cols": 6,
-    "cells": {
-      "0-2": {
-        "type": "clue",
-        "dir": "down",
-        "text": "Bref, de courte durée (ex: film ~)"
-      },
-      "0-4": {
-        "type": "clue",
-        "dir": "down",
-        "text": "Septième art, c'est le cinéma"
-      },
-      "1-0": {
-        "type": "clue",
-        "dir": "right",
-        "text": "Surface blanche où l'on projette un film"
-      },
-      "1-1": {
-        "type": "letter",
-        "answer": "E"
-      },
-      "1-2": {
-        "type": "letter",
-        "answer": "C"
-      },
-      "1-3": {
-        "type": "letter",
-        "answer": "R"
-      },
-      "1-4": {
-        "type": "letter",
-        "answer": "A"
-      },
-      "1-5": {
-        "type": "letter",
-        "answer": "N"
-      },
-      "2-2": {
-        "type": "letter",
-        "answer": "O"
-      },
-      "2-4": {
-        "type": "letter",
-        "answer": "R"
-      },
-      "3-2": {
-        "type": "letter",
-        "answer": "U"
-      },
-      "3-4": {
-        "type": "letter",
-        "answer": "T"
-      },
-      "4-2": {
-        "type": "letter",
-        "answer": "R"
-      },
-      "5-2": {
-        "type": "letter",
-        "answer": "T"
-      }
-    }
-  },
-  {
-    "id": "p5",
-    "theme": "Sport",
-    "rows": 6,
-    "cols": 7,
-    "cells": {
-      "0-3": {
-        "type": "clue",
-        "dir": "down",
-        "text": "Sport de combat au corps à corps"
+        "text": "Pantalon en denim"
       },
       "0-6": {
         "type": "clue",
         "dir": "down",
-        "text": "Se déplacer dans l'eau"
+        "text": "Légume blanc"
       },
-      "1-0": {
+      "0-7": {
         "type": "clue",
-        "dir": "right",
-        "text": "Objet rond qu'on shoote ou qu'on lance"
+        "dir": "down",
+        "text": "Petit cours d'eau"
+      },
+      "0-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Aliments enfilés sur une tige"
+      },
+      "0-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Cervidé des régions froides"
       },
       "1-1": {
-        "type": "letter",
-        "answer": "B"
+        "type": "clue",
+        "dir": "down",
+        "text": "Galette fine"
       },
       "1-2": {
-        "type": "letter",
-        "answer": "A"
+        "type": "clue",
+        "dir": "down",
+        "text": "Point d'eau dans le désert"
       },
       "1-3": {
-        "type": "letter",
-        "answer": "L"
-      },
-      "1-4": {
-        "type": "letter",
-        "answer": "L"
+        "type": "clue",
+        "dir": "down",
+        "text": "Cérémonie codifiée"
       },
       "1-5": {
         "type": "letter",
-        "answer": "O"
+        "answer": "J"
       },
       "1-6": {
         "type": "letter",
         "answer": "N"
       },
+      "1-7": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "1-8": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "1-9": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "2-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Oiseau noir"
+      },
+      "2-1": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "2-2": {
+        "type": "letter",
+        "answer": "O"
+      },
       "2-3": {
         "type": "letter",
-        "answer": "U"
+        "answer": "R"
+      },
+      "2-4": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "2-5": {
+        "type": "letter",
+        "answer": "E"
       },
       "2-6": {
         "type": "letter",
         "answer": "A"
       },
+      "2-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "2-8": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "2-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "3-1": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-2": {
+        "type": "letter",
+        "answer": "A"
+      },
       "3-3": {
         "type": "letter",
-        "answer": "T"
+        "answer": "I"
+      },
+      "3-4": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Appareil de transport aérien"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "A"
       },
       "3-6": {
         "type": "letter",
-        "answer": "G"
+        "answer": "V"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "3-8": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "3-9": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "4-1": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "S"
       },
       "4-3": {
         "type": "letter",
         "answer": "T"
       },
+      "4-5": {
+        "type": "letter",
+        "answer": "N"
+      },
       "4-6": {
         "type": "letter",
         "answer": "E"
       },
+      "4-7": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "5-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Extrémité de la jambe"
+      },
+      "5-1": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "I"
+      },
       "5-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "5-6": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Pays de la péninsule ibérique"
+      },
+      "6-1": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Fleur d'automne"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "7-8": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "8-3": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Grande antilope à cornes spirales"
+      },
+      "8-4": {
+        "type": "letter",
+        "answer": "K"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "8-8": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "9-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Joint souple étanche"
+      },
+      "9-1": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "9-2": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "9-3": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "9-7": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "9-8": {
+        "type": "letter",
+        "answer": "E"
+      }
+    }
+  },
+  {
+    "id": "p4",
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
+    "cells": {
+      "0-2": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Poisson noble"
+      },
+      "0-5": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Chèvre sauvage"
+      },
+      "0-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Liant hydraulique"
+      },
+      "0-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Division d'un livre"
+      },
+      "0-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Lieu pour garer une voiture"
+      },
+      "1-2": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "1-3": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Odeur agréable"
+      },
+      "1-5": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "1-6": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "1-7": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "1-8": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "2-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Pointe de terre dans la mer"
+      },
+      "2-1": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "2-2": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "2-3": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "2-5": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "2-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "2-7": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "2-8": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "2-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Couleur métallique"
+      },
+      "3-1": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Vêtement féminin"
+      },
+      "3-2": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-3": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "3-4": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Poisson plat"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "3-6": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "3-8": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-9": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "4-1": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "4-2": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Partie inférieure"
+      },
+      "4-3": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "4-4": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "4-5": {
+        "type": "letter",
+        "answer": "Q"
+      },
+      "4-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-7": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "5-1": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "5-3": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "5-5": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "5-6": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "6-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Petite boule de viande"
+      },
+      "6-1": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-9": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "7-1": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "7-6": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Céréale asiatique"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "7-8": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-9": {
+        "type": "letter",
+        "answer": "Z"
+      },
+      "8-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Action de souhaiter"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "8-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-4": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-8": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "8-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Ville des parcs d'attractions"
+      },
+      "9-1": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "9-2": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "9-3": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "9-7": {
+        "type": "letter",
+        "answer": "O"
+      }
+    }
+  },
+  {
+    "id": "p5",
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
+    "cells": {
+      "0-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Pâtisserie ronde"
+      },
+      "0-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Partie du blé"
+      },
+      "0-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Jaune-terre"
+      },
+      "0-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Pain râpé"
+      },
+      "1-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Poisson rouge"
+      },
+      "1-1": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "1-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "1-3": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "1-4": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "1-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "1-6": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "1-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "1-8": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "1-9": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "2-3": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Poisson fumé"
+      },
+      "2-4": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Pointe de terre dans la mer"
+      },
+      "2-5": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "2-6": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "2-7": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "2-8": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "2-9": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "3-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Feuilles assemblées"
+      },
+      "3-1": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "3-2": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "3-3": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "3-4": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "3-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "3-8": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-9": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Fleuve de Chine"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "Y"
+      },
+      "4-3": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-4": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "4-5": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "4-6": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "4-7": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "5-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Temps actuel"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "5-3": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-5": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "5-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Ensemble de spectacles"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "V"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-9": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "7-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Petit chemin"
+      },
+      "7-1": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "7-9": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "8-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Voiture de train"
+      },
+      "8-1": {
+        "type": "letter",
+        "answer": "W"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "8-3": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "8-4": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "8-6": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Paroi verticale"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "8-8": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "8-9": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "9-2": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Meuble à tiroirs"
+      },
+      "9-3": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "9-7": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "9-8": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "9-9": {
+        "type": "letter",
+        "answer": "E"
+      }
+    }
+  },
+  {
+    "id": "p6",
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
+    "cells": {
+      "0-1": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Paroi verticale"
+      },
+      "0-3": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Religieuse"
+      },
+      "0-4": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Rongeur de laboratoire"
+      },
+      "0-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Professionnel de la santé"
+      },
+      "0-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Fruit rouge"
+      },
+      "1-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Détroit entre la France et l'Angleterre"
+      },
+      "1-1": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "1-2": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "1-3": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "1-4": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "1-5": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "1-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "1-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Fleur épineuse"
+      },
+      "1-8": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "1-9": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "2-1": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "2-2": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Racine tropicale"
+      },
+      "2-3": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "2-4": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "2-5": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Bovidé d'Afrique"
+      },
+      "2-7": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "2-8": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "2-9": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-1": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-2": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "3-3": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "3-4": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "3-8": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "3-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Fruit tropical"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-3": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "4-4": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-5": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "4-6": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-7": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "5-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Équidé têtu"
+      },
+      "5-1": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "5-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "Y"
+      },
+      "5-5": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "5-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Fermeture à glissière"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Art de l'image animée"
+      },
+      "6-1": {
+        "type": "letter",
+        "answer": "V"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "Z"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "6-9": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "7-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Marais à végétation accumulée"
+      },
+      "7-1": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-8": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "7-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "8-4": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Saveur relevée"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "8-8": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "8-9": {
+        "type": "letter",
+        "answer": "E"
+      }
+    }
+  },
+  {
+    "id": "p7",
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
+    "cells": {
+      "0-1": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Extrémité de la jambe"
+      },
+      "0-2": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Revêtement dur du bout des doigts"
+      },
+      "0-3": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Mode du réel"
+      },
+      "0-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Chute d'eau"
+      },
+      "0-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Insecte volant"
+      },
+      "1-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Légume long"
+      },
+      "1-1": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "1-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "1-3": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "1-4": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "1-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "1-6": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "1-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "1-8": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "1-9": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "2-1": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "2-2": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "2-3": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "2-4": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Capitale de l'Espagne"
+      },
+      "2-5": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Fleur printanière"
+      },
+      "2-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Antilope du nord de l'Afrique"
+      },
+      "2-8": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "2-9": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "3-1": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "3-2": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "3-3": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "3-4": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "3-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Canidé roux réputé rusé"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "3-8": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "3-9": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "4-1": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "4-3": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "4-4": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-5": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "4-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "4-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "5-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Sans humidité"
+      },
+      "5-1": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-3": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "5-5": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "5-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "6-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Liquide pour attendrir"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "6-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Expression de la beauté"
+      },
+      "7-1": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "7-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Saveur piquante"
+      },
+      "8-1": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "8-3": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "8-4": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-2": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Brin très fin"
+      },
+      "9-3": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "D"
+      }
+    }
+  },
+  {
+    "id": "p8",
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
+    "cells": {
+      "0-4": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Rocher dangereux en mer"
+      },
+      "0-5": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Objet de culte"
+      },
+      "0-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Action de déchiffrer un texte"
+      },
+      "0-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Fleur blanche élégante"
+      },
+      "1-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Herbe acide"
+      },
+      "1-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "1-3": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "1-4": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "1-5": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "1-6": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "1-7": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "1-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "2-2": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Partie inférieure"
+      },
+      "2-3": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Métal léger"
+      },
+      "2-4": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "2-5": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "2-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "2-7": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "2-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Protection pour les mains"
+      },
+      "3-2": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "3-3": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "3-4": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "3-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "3-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Pièce filetée"
+      },
+      "3-9": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "4-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Organe qui filtre le sang"
+      },
+      "4-1": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "4-3": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "4-4": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-5": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "4-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Capitale de la France"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "5-3": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "5-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "6-5": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Antilope d'Asie"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "6-9": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "7-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Marsupial sauteur"
+      },
+      "7-1": {
+        "type": "letter",
+        "answer": "K"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "7-8": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "7-9": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "8-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Métal radioactif"
+      },
+      "8-1": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "8-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-4": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "8-8": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "8-9": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "9-3": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Grand mammifère omnivore"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "9-7": {
+        "type": "letter",
+        "answer": "S"
+      }
+    }
+  },
+  {
+    "id": "p9",
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
+    "cells": {
+      "0-3": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Pays voisin de l'est"
+      },
+      "0-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Végétal bas"
+      },
+      "1-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Ceinture pelvienne"
+      },
+      "1-2": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "1-3": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "1-4": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "1-5": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "1-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "1-7": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "1-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Métal radioactif"
+      },
+      "1-9": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "2-2": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Action de déchiffrer un texte"
+      },
+      "2-3": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "2-4": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "2-5": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "2-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "2-8": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "2-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "3-2": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Salade verte"
+      },
+      "3-3": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "3-4": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "3-6": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "3-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "3-9": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "4-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Organe qui pompe le sang"
+      },
+      "4-1": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "4-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-4": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "4-5": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "4-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Fleuve frontalier"
+      },
+      "4-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Volaille aquatique"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "5-3": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "5-4": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Élément chimique"
+      },
+      "5-5": {
+        "type": "letter",
+        "answer": "B"
+      },
+      "5-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "5-8": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "6-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Boisson blanche des mammifères"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "6-3": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Céréale asiatique"
+      },
+      "7-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Concepteur technique"
+      },
+      "7-1": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "G"
+      },
+      "7-4": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-8": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "7-9": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "8-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Chocolat coulant"
+      },
+      "8-1": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "8-3": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "8-4": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "8-8": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "8-9": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "9-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Période de cent ans"
+      },
+      "9-1": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "9-2": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "9-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-9": {
+        "type": "letter",
+        "answer": "Z"
+      }
+    }
+  },
+  {
+    "id": "p10",
+    "theme": "Généraliste",
+    "rows": 10,
+    "cols": 10,
+    "cells": {
+      "0-2": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Épice douce"
+      },
+      "0-7": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Système pour fermer"
+      },
+      "0-8": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Boue au fond de l'eau"
+      },
+      "0-9": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Chute de neige en montagne"
+      },
+      "1-2": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "1-3": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Meuble pour dormir"
+      },
+      "1-5": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Horloge à balancier"
+      },
+      "1-6": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Herbe aromatique"
+      },
+      "1-7": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "1-8": {
+        "type": "letter",
+        "answer": "V"
+      },
+      "1-9": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "2-1": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Viande hachée"
+      },
+      "2-2": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "2-3": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "2-4": {
+        "type": "clue",
+        "dir": "down",
+        "text": "Légumineuse asiatique"
+      },
+      "2-5": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "2-6": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "2-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "2-8": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "2-9": {
+        "type": "letter",
+        "answer": "V"
+      },
+      "3-1": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "3-2": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "3-3": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "3-4": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "3-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "3-6": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "3-7": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "3-8": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "3-9": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Mot de sens opposé"
+      },
+      "4-1": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "4-2": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "4-3": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "4-4": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "4-5": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "4-6": {
+        "type": "letter",
+        "answer": "Y"
+      },
+      "4-7": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "4-8": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "4-9": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "5-1": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "5-2": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-4": {
+        "type": "letter",
+        "answer": "J"
+      },
+      "5-5": {
+        "type": "letter",
+        "answer": "D"
+      },
+      "5-6": {
+        "type": "letter",
+        "answer": "M"
+      },
+      "5-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "5-9": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-1": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "6-2": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "6-3": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Capitale du Texas"
+      },
+      "6-4": {
+        "type": "letter",
+        "answer": "A"
+      },
+      "6-5": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "6-6": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "6-7": {
+        "type": "letter",
+        "answer": "T"
+      },
+      "6-8": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "6-9": {
+        "type": "letter",
+        "answer": "N"
+      },
+      "7-0": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Terre entourée d'eau"
+      },
+      "7-1": {
+        "type": "letter",
+        "answer": "I"
+      },
+      "7-2": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "7-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "7-4": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Canidé sauvage"
+      },
+      "7-5": {
+        "type": "letter",
+        "answer": "L"
+      },
+      "7-6": {
+        "type": "letter",
+        "answer": "O"
+      },
+      "7-7": {
+        "type": "letter",
+        "answer": "U"
+      },
+      "7-8": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "7-9": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "8-1": {
+        "type": "letter",
+        "answer": "S"
+      },
+      "8-2": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-3": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Métal courant"
+      },
+      "8-4": {
+        "type": "letter",
+        "answer": "F"
+      },
+      "8-5": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "8-6": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "8-7": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "8-9": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "9-1": {
+        "type": "clue",
+        "dir": "right",
+        "text": "Saut avec une tige flexible"
+      },
+      "9-2": {
+        "type": "letter",
+        "answer": "P"
+      },
+      "9-3": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-4": {
+        "type": "letter",
+        "answer": "R"
+      },
+      "9-5": {
+        "type": "letter",
+        "answer": "C"
+      },
+      "9-6": {
+        "type": "letter",
+        "answer": "H"
+      },
+      "9-7": {
+        "type": "letter",
+        "answer": "E"
+      },
+      "9-9": {
         "type": "letter",
         "answer": "E"
       }
